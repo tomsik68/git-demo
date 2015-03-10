@@ -5,7 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  ExtCtrls;
 
 type
 
@@ -13,6 +14,8 @@ type
 
   TForm1 = class(TForm)
     Button1: TButton;
+    Image1: TImage;
+    procedure Button1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -25,6 +28,14 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  Image1.Canvas.Brush.Color := clMaroon;
+  Image1.Canvas.Rectangle(Image1.Canvas.ClipRect);
+end;
 
 end.
 
