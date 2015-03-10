@@ -5,10 +5,14 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls;
 
 type
+
+  { TForm1 }
+
   TForm1 = class(TForm)
+    Button1: TButton;
   private
     { private declarations }
   public
